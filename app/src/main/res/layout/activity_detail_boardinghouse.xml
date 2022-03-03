@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/iv_detail_house"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:contentDescription="@string/desc_img_boarding_house_image"
+        android:scaleType="fitXY"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/img_detail_house" />
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/iv_back"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:background="@color/blue"
+        android:contentDescription="@string/desc_icon_back"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:shapeAppearanceOverlay="@style/CustomShapeRound"
+        app:srcCompat="@drawable/ic_back" />
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/iv_wishlist"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:background="@color/white"
+        android:src="@drawable/ic_wishlist"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:shapeAppearanceOverlay="@style/CustomShapeRound" />
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/cv_detail"
+        android:layout_width="match_parent"
+        android:layout_height="400dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:shapeAppearance="@style/RoundedTopLeftRight">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:scrollbars="none">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/tv_house_name"
+                    style="@style/Title"
+                    android:layout_marginTop="32dp"
+                    android:textSize="18sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:text="Kos Singgah Sini" />
+
+                <TextView
+                    android:id="@+id/txt_lbl_location"
+                    style="@style/Title"
+                    android:text="@string/txt_location"
+                    android:textSize="18sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_house_name" />
+
+                <TextView
+                    android:id="@+id/tv_location"
+                    style="@style/Body2"
+                    android:layout_marginTop="8dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/txt_lbl_location"
+                    tools:text=" Jl Taman S. Parman Blok A 3 Grogol Petamburan Jakarta Barat" />
+
+                <TextView
+                    android:id="@+id/tv_facility"
+                    style="@style/Title"
+                    android:text="@string/txt_facility"
+                    android:textSize="18sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_location" />
+
+                <ImageView
+                    android:id="@+id/iv_wifi"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:contentDescription="@string/desc_icon_facilities"
+                    android:scaleType="fitXY"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_facility"
+                    app:srcCompat="@drawable/ic_wifi" />
+
+                <ImageView
+                    android:id="@+id/iv_airconditioner"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:contentDescription="@string/desc_icon_facilities"
+                    app:layout_constraintStart_toEndOf="@+id/iv_wifi"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_facility"
+                    app:srcCompat="@drawable/ic_airconditioner" />
+
+                <ImageView
+                    android:id="@+id/iv_television"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:contentDescription="@string/desc_icon_facilities"
+                    app:layout_constraintStart_toEndOf="@+id/iv_airconditioner"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_facility"
+                    app:srcCompat="@drawable/ic_television" />
+
+                <ImageView
+                    android:id="@+id/iv_coffe"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:contentDescription="@string/desc_icon_facilities"
+                    app:layout_constraintStart_toEndOf="@+id/iv_television"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_facility"
+                    app:srcCompat="@drawable/ic_coffee" />
+
+                <ImageView
+                    android:id="@+id/iv_shower"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:contentDescription="@string/desc_icon_facilities"
+                    app:layout_constraintStart_toEndOf="@+id/iv_coffe"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_facility"
+                    app:srcCompat="@drawable/ic_shower" />
+
+                <TextView
+                    android:id="@+id/tv_lbl_description"
+                    style="@style/Title"
+                    android:layout_marginTop="0dp"
+                    android:text="@string/txxt_description"
+                    android:textSize="18sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/iv_wifi" />
+
+                <TextView
+                    android:id="@+id/tv_description"
+                    style="@style/Body2"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginBottom="16dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="1.0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_lbl_description"
+                    app:layout_constraintVertical_bias="0.0"
+                    tools:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat." />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </ScrollView>
+    </com.google.android.material.card.MaterialCardView>
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/cv_rentnow"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        app:cardElevation="3dp"
+        app:shapeAppearance="@style/RoundedTopLeftRight"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/tv_lbl_price"
+                style="@style/Body2"
+                android:text="@string/txt_price_unit"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tv_price"
+                style="@style/Title"
+                android:layout_marginTop="4dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_lbl_price"
+                tools:text="IDR 650K" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_rentnow"
+                style="@style/CustomButton"
+                android:layout_marginBottom="16dp"
+                android:text="@string/txt_rentnow"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/tv_price"
+                app:layout_constraintTop_toTopOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </com.google.android.material.card.MaterialCardView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

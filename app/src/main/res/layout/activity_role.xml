@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/iv_back"
+        style="@style/BasicIcon"
+        android:background="@color/blue"
+        android:src="@drawable/ic_back_button"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_title_signup"
+        style="@style/TitleMedium"
+        android:layout_marginTop="32dp"
+        android:text="@string/txt_title_signup"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/iv_back" />
+
+    <TextView
+        android:id="@+id/tv_choose_role"
+        style="@style/Body"
+        android:text="@string/txt_role"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_title_signup" />
+
+    <LinearLayout
+        android:id="@+id/ll_role_user"
+        style="@style/LinearLayoutRole"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_choose_role"
+        tools:ignore="UseCompoundDrawables">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:contentDescription="@string/desc_img_role"
+            android:src="@drawable/img_role_user" />
+
+        <TextView
+            style="@style/TitleMedium"
+            android:layout_width="match_parent"
+            android:layout_gravity="center_vertical|end"
+            android:layout_marginTop="0dp"
+            android:text="@string/txt_role_user"
+            android:textAlignment="textEnd" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_role_owner"
+        style="@style/LinearLayoutRole"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ll_role_user"
+        tools:ignore="UseCompoundDrawables">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:contentDescription="@string/desc_img_role"
+            android:src="@drawable/img_role_owner" />
+
+        <TextView
+            style="@style/TitleMedium"
+            android:layout_width="match_parent"
+            android:layout_gravity="center_vertical|end"
+            android:layout_marginTop="0dp"
+            android:text="@string/txt_role_owner"
+            android:textAlignment="textEnd" />
+    </LinearLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

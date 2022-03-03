@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/iv_back"
+        style="@style/BasicIcon"
+        android:background="@color/blue"
+        android:src="@drawable/ic_back_button"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_lbl_help"
+        style="@style/Title"
+        android:text="@string/txt_help"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/iv_back"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_found_problems"
+        style="@style/Body2"
+        android:layout_marginTop="64dp"
+        android:text="@string/txt_found_problems"
+        android:textStyle="bold"
+        android:textSize="18sp"
+        android:textAlignment="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_lbl_help" />
+
+    <TextView
+        android:id="@+id/tv_connect_cs"
+        style="@style/Body2"
+        android:layout_marginTop="0dp"
+        android:textSize="14sp"
+        android:textAlignment="center"
+        android:text="@string/txt_desc_calls_admin"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_found_problems" />
+
+    <LinearLayout
+        android:id="@+id/ll_callwa"
+        style="@style/LinearLayoutRole"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_connect_cs">
+
+        <TextView
+            android:id="@+id/tv_callwa"
+            style="@style/TitleMedium"
+            android:layout_marginTop="0dp"
+            android:layout_width="match_parent"
+            android:text="@string/txt_connectwa"
+            android:drawablePadding="12dp"
+            app:layout_constraintTop_toBottomOf="@+id/tv_connect_cs"
+            app:drawableLeftCompat="@drawable/ic_whatsapp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_callemail"
+        style="@style/LinearLayoutRole"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ll_callwa">
+
+        <TextView
+            android:id="@+id/tv_callemail"
+            style="@style/TitleMedium"
+            android:layout_marginTop="0dp"
+            android:layout_width="match_parent"
+            android:text="@string/txt_connect_email"
+            android:drawablePadding="12dp"
+            app:layout_constraintTop_toBottomOf="@+id/tv_connect_cs"
+            app:drawableLeftCompat="@drawable/ic_email" />
+    </LinearLayout>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

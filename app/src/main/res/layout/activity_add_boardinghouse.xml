@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/iv_back"
+            style="@style/BasicIcon"
+            android:background="@color/blue"
+            android:src="@drawable/ic_back_button"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_title_boarding_name"
+            style="@style/TitleMedium"
+            android:layout_marginTop="48dp"
+            android:text="@string/txt_boarding_name"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/iv_back" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/til_boarding_name"
+            style="@style/CustomTextInputLayout"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_title_boarding_name">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/tiet_boarding_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/hint_boarding_name"
+                android:inputType="textEmailAddress" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <TextView
+            android:id="@+id/tv_title_boarding_location"
+            style="@style/TitleMedium"
+            android:layout_marginTop="8dp"
+            android:text="@string/txt_boarding_location"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/til_boarding_name" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/til_boarding_location"
+            style="@style/CustomTextInputLayout"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_title_boarding_location">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/tiet_boarding_location"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/hint_boarding_location"
+                android:inputType="textMultiLine" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <TextView
+            android:id="@+id/tv_title_boarding_province"
+            style="@style/TitleMedium"
+            android:layout_marginTop="8dp"
+            android:text="@string/txt_boarding_province"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/til_boarding_location" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/til_boarding_province"
+            style="@style/CustomTextInputLayout"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_title_boarding_province">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/tiet_boarding_province"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/hint_boarding_province"
+                android:inputType="textEmailAddress" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <TextView
+            android:id="@+id/tv_title_boarding_districs"
+            style="@style/TitleMedium"
+            android:layout_marginTop="8dp"
+            android:text="@string/txt_boarding_districs"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/til_boarding_province" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/til_boarding_districs"
+            style="@style/CustomTextInputLayout"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_title_boarding_districs">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/tiet_boarding_districs"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/hint_boarding_districs"
+                android:inputType="textEmailAddress" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <androidx.fragment.app.FragmentContainerView
+            android:id="@+id/map"
+            android:name="com.google.android.gms.maps.SupportMapFragment"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="16dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/til_boarding_districs" />
+
+        <TextView
+            android:id="@+id/tv_title_boarding_price"
+            style="@style/TitleMedium"
+            android:layout_marginTop="8dp"
+            android:text="@string/txt_boarding_price"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/map" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/til_boarding_price"
+            style="@style/CustomTextInputLayout"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_title_boarding_price">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/tiet_boarding_price"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/hint_boarding_price"
+                android:inputType="textEmailAddress" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <TextView
+            android:id="@+id/tv_title_boarding_facility"
+            style="@style/TitleMedium"
+            android:layout_marginTop="8dp"
+            android:text="@string/txt_boarding_facility"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/til_boarding_price" />
+
+        <CheckBox
+            android:id="@+id/cb_bathroom"
+            style="@style/CustomCheckBox"
+            android:text="@string/txt_bathroom"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_title_boarding_facility" />
+
+        <CheckBox
+            android:id="@+id/cb_cctv"
+            style="@style/CustomCheckBox"
+            android:text="@string/txt_cctv"
+            app:layout_constraintStart_toEndOf="@+id/cb_bathroom"
+            app:layout_constraintTop_toBottomOf="@+id/tv_title_boarding_facility" />
+
+        <CheckBox
+            android:id="@+id/cb_kitchen"
+            style="@style/CustomCheckBox"
+            android:text="@string/txt_kitchen"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/cb_bathroom" />
+
+        <CheckBox
+            android:id="@+id/cb_airconditioner"
+            style="@style/CustomCheckBox"
+            android:text="@string/txt_airconditioner"
+            app:layout_constraintStart_toEndOf="@+id/cb_bathroom"
+            app:layout_constraintTop_toBottomOf="@+id/cb_bathroom" />
+
+
+        <CheckBox
+            android:id="@+id/cb_parking"
+            style="@style/CustomCheckBox"
+            android:text="@string/txt_parkalot"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/cb_kitchen" />
+
+        <CheckBox
+            android:id="@+id/cb_television"
+            style="@style/CustomCheckBox"
+            android:layout_marginTop="16dp"
+            android:text="@string/txt_television"
+            app:layout_constraintStart_toEndOf="@+id/cb_bathroom"
+            app:layout_constraintTop_toBottomOf="@+id/cb_kitchen" />
+
+        <ImageView
+            android:id="@+id/iv_upload_picture"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:contentDescription="@string/desc_image_of_upload"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/cb_parking"
+            app:srcCompat="@drawable/img_upload" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_save"
+            style="@style/CustomButton"
+            android:layout_marginBottom="16dp"
+            android:text="@string/btn_save"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/iv_upload_picture" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

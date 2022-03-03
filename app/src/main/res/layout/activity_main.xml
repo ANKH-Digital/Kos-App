@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <ImageView
+        android:id="@+id/iv_img_house"
+        android:layout_width="0dp"
+        android:layout_height="350dp"
+        android:contentDescription="@string/desc_img_house"
+        android:scaleType="fitXY"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/img_bg_login" />
+
+    <TextView
+        android:id="@+id/tv_welcome"
+        style="@style/Title"
+        android:text="@string/txt_welcome"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toTopOf="@+id/tv_subwelcome"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_subwelcome"
+        style="@style/Body2"
+        android:layout_marginBottom="32dp"
+        android:text="@string/txt_subwelcome"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="@+id/iv_img_house"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/iv_img_house" />
+
+    <TextView
+        android:id="@+id/tv_title_email"
+        style="@style/TitleMedium"
+        android:text="@string/txt_email"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/iv_img_house" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/til_email"
+        style="@style/CustomTextInputLayout"
+        app:layout_constraintEnd_toEndOf="@+id/iv_img_house"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_title_email">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/tiet_email"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/hint_email"
+            android:inputType="textEmailAddress" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <TextView
+        android:id="@+id/tv_title_password"
+        style="@style/TitleMedium"
+        android:text="@string/txt_password"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/til_email" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/til_password"
+        style="@style/CustomTextInputLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_title_password">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/tiet_password"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/hint_password"
+            android:inputType="textEmailAddress" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_signin"
+        style="@style/CustomButton"
+        android:text="@string/txt_sign_in"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/til_password" />
+
+    <TextView
+        android:id="@+id/tv_subtitle_signup"
+        style="@style/Body"
+        android:text="@string/txt_subtxt_signup"
+        android:textColor="@color/gray"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_signin" />
+
+    <TextView
+        android:id="@+id/tv_signup"
+        style="@style/Body"
+        android:text="@string/txt_signup"
+        android:textColor="@color/blue"
+        app:layout_constraintStart_toEndOf="@+id/tv_subtitle_signup"
+        app:layout_constraintTop_toBottomOf="@+id/btn_signin" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="150dp"
+    android:layout_gravity="center_horizontal"
+    android:layout_margin="8dp"
+    android:backgroundTint="@color/light_gray"
+    app:cardCornerRadius="16dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/iv_boardinghouse"
+            android:layout_width="125dp"
+            android:layout_height="match_parent"
+            android:contentDescription="@string/desc_img_boarding_house_image"
+            android:scaleType="fitXY"
+            android:src="@drawable/img_house"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_boardingname"
+            style="@style/Title"
+            android:layout_marginTop="8dp"
+            android:textSize="16sp"
+            app:layout_constraintStart_toEndOf="@+id/iv_boardinghouse"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="Kos SinggahSini" />
+
+        <TextView
+            android:id="@+id/tv_location"
+            style="@style/Body2"
+            android:layout_marginTop="4dp"
+            android:textSize="12sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/iv_boardinghouse"
+            app:layout_constraintTop_toBottomOf="@+id/tv_boardingname"
+            tools:text="Grogol Petamburan Jakarta Barat" />
+
+        <TextView
+            android:id="@+id/tv_bed"
+            style="@style/Body2"
+            app:drawableLeftCompat="@drawable/ic_bed"
+            app:layout_constraintStart_toEndOf="@+id/iv_boardinghouse"
+            app:layout_constraintTop_toBottomOf="@+id/tv_location"
+            tools:text=" 1" />
+
+        <TextView
+            android:id="@+id/tv_pool"
+            style="@style/Body2"
+            app:drawableLeftCompat="@drawable/ic_pool"
+            app:layout_constraintStart_toEndOf="@+id/tv_bed"
+            app:layout_constraintTop_toBottomOf="@+id/tv_location"
+            tools:text=" 2" />
+
+        <TextView
+            android:id="@+id/tv_bath"
+            style="@style/Body2"
+            app:drawableLeftCompat="@drawable/ic_bath"
+            app:layout_constraintStart_toEndOf="@+id/tv_pool"
+            app:layout_constraintTop_toBottomOf="@+id/tv_location"
+            tools:text=" 3" />
+
+        <TextView
+            android:id="@+id/tv_price"
+            style="@style/Title"
+            android:layout_marginBottom="8dp"
+            android:textSize="14sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/iv_boardinghouse"
+            tools:text="IDR 650k/month" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.cardview.widget.CardView>
