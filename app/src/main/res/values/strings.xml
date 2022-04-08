@@ -83,4 +83,11 @@
     <string name="txt_cctv">CCTV</string>
     <string name="txt_bathroom">Kamar Mandi</string>
     <string name="desc_image_of_upload">Image of Upload</string>
+    <string name="txt_old_password">Password lama</string>
+    <string name="txt_new_password">IPassword baru</string>
+    <string name="txt_confirm_new_password">Ketik ulang password baru</string>
+    <string name="hint_old_password">Masukkan password lama</string>
+    <string name="hint_new_password">Masukkan password baru</string>
+    <string name="hint_confirm_new_password">Ketik ulang password baru</string>
+    <string name="btn_change_password">Ubah Password</string>
 </resources>
