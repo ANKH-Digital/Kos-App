@@ -5,16 +5,69 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <ImageView
-        android:id="@+id/iv_detail_house"
-        android:layout_width="match_parent"
+    <HorizontalScrollView
+        android:id="@+id/horizontalScrollView2"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:contentDescription="@string/desc_img_boarding_house_image"
-        android:scaleType="fitXY"
+        android:fillViewport="true"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/img_detail_house" />
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:id="@+id/ll_img_slider"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/iv_detail_house"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="4dp"
+                android:contentDescription="@string/desc_img_boarding_house_image"
+                android:scaleType="fitXY"
+                app:srcCompat="@drawable/img_detail_house" />
+
+            <ImageView
+                android:id="@+id/iv_detail_house2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="4dp"
+                android:contentDescription="@string/desc_img_boarding_house_image"
+                android:scaleType="fitXY"
+                app:srcCompat="@drawable/img_detail_house" />
+
+            <ImageView
+                android:id="@+id/iv_detail_house3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="4dp"
+                android:contentDescription="@string/desc_img_boarding_house_image"
+                android:scaleType="fitXY"
+                app:srcCompat="@drawable/img_detail_house" />
+
+            <ImageView
+                android:id="@+id/iv_detail_house4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="4dp"
+                android:contentDescription="@string/desc_img_boarding_house_image"
+                android:scaleType="fitXY"
+                app:srcCompat="@drawable/img_detail_house" />
+
+            <ImageView
+                android:id="@+id/iv_detail_house5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="4dp"
+                android:contentDescription="@string/desc_img_boarding_house_image"
+                android:scaleType="fitXY"
+                app:srcCompat="@drawable/img_detail_house" />
+
+        </LinearLayout>
+    </HorizontalScrollView>
+
 
     <com.google.android.material.imageview.ShapeableImageView
         android:id="@+id/iv_back"
@@ -44,7 +97,7 @@
     <com.google.android.material.card.MaterialCardView
         android:id="@+id/cv_detail"
         android:layout_width="match_parent"
-        android:layout_height="400dp"
+        android:layout_height="450dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -171,10 +224,10 @@
         android:layout_width="match_parent"
         android:layout_height="100dp"
         app:cardElevation="3dp"
-        app:shapeAppearance="@style/RoundedTopLeftRight"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent">
+        app:layout_constraintStart_toStartOf="parent"
+        app:shapeAppearance="@style/RoundedTopLeftRight">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
